@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NoogleCoursework
+namespace NoogleProject
 {
     public class Messages
     {
         private string name;
         private string email;
         private string message;
-        
-        
+
+
         public string Name
         {
             get

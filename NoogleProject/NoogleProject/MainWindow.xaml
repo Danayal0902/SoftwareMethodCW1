@@ -1,0 +1,20 @@
+﻿<Window x:Class="NoogleProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NoogleProject"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="337.374">
+    <Grid>
+        <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="143,289,0,0" VerticalAlignment="Top" Width="75" Click="btnSubmit_Click"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="23" Margin="86,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194"/>
+        <Label x:Name="lblName" Content="Name:" HorizontalAlignment="Left" Margin="24,39,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblEmail" Content="Email:" HorizontalAlignment="Left" Margin="24,88,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="23" Margin="86,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194"/>
+        <TextBox x:Name="txtName_Copy" HorizontalAlignment="Left" Height="128" Margin="86,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194"/>
+        <Label x:Name="lblMessage" Content="Message:" HorizontalAlignment="Left" Margin="24,136,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label" Content="Noogle" HorizontalAlignment="Left" Margin="112,-11,0,0" VerticalAlignment="Top" FontSize="26.667"/>
+
+    </Grid>
+</Window>
