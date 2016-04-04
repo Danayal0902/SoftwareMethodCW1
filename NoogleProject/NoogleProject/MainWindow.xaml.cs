@@ -29,7 +29,7 @@ namespace NoogleProject
         {
             MessageFilter mf = new MessageFilter();
 
-            mf.Reader
+            mf.Reader(txtMessage.Text);
         }
     }
 }

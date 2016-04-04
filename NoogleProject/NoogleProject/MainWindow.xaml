@@ -12,7 +12,7 @@
         <Label x:Name="lblName" Content="Name:" HorizontalAlignment="Left" Margin="24,39,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblEmail" Content="Email:" HorizontalAlignment="Left" Margin="24,88,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="23" Margin="86,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194"/>
-        <TextBox x:Name="txtName_Copy" HorizontalAlignment="Left" Height="128" Margin="86,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194"/>
+        <TextBox x:Name="txtMessage" HorizontalAlignment="Left" Height="128" Margin="86,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194"/>
         <Label x:Name="lblMessage" Content="Message:" HorizontalAlignment="Left" Margin="24,136,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label" Content="Noogle" HorizontalAlignment="Left" Margin="112,-11,0,0" VerticalAlignment="Top" FontSize="26.667"/>
 

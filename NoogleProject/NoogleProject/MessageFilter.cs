@@ -11,7 +11,7 @@ namespace NoogleProject
     {
         string message;
 
-        public static void Reader(string message)
+        public void Reader(string message)
         {
             try
             {
