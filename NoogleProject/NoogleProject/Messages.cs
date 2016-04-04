@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace NoogleProject
 {
-    public class Messages
+    class Messages
     {
         private string name;
         private string email;
-        private string message;
+        private string inputMessage;
 
 
         public string Name
@@ -27,7 +27,7 @@ namespace NoogleProject
                 }
                 else
                 {
-                    value = name;
+                    name = value;
                 }
             }
         }
@@ -47,28 +47,50 @@ namespace NoogleProject
                 }
                 else
                 {
-                    value = email;
+                    email = value;
                 }
             }
         }
 
-        public string Message
+        public string InputMessage
         {
             get
             {
-                return message;
+                return inputMessage;
             }
             set
             {
-                if (message == null)
+                if (inputMessage == null)
                 {
                     throw new Exception("Please enter a message");
                 }
                 else
                 {
-                    value = message;
+                    inputMessage = value;
                 }
             }
+        }
+
+        public Messages(string name, string email, string message)
+        {
+            this.name = name;
+            this.email = email;
+            this.inputMessage = message;
+        }
+
+        public string NameText()
+        {
+            return name;
+        }
+
+        public string EmailText()
+        {
+            return email;
+        }
+
+        public string InputMessageText()
+        {
+            return inputMessage;
         }
     }
 }

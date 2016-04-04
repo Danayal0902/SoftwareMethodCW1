@@ -29,7 +29,18 @@ namespace NoogleProject
         {
             MessageFilter mf = new MessageFilter();
 
-            mf.Reader(txtMessage.Text);
+            Messages m = new Messages(txtName.Text, txtEmail.Text, txtMessage.Text);
+
+            if (mf.Reader(m.InputMessage) == true)
+            {
+                MessageBox.Show("Unacceptable word(s) detected");
+            }
+            else
+            {
+
+            }
         }
+
+        
     }
 }
