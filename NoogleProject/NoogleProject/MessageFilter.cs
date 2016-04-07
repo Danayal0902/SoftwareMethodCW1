@@ -32,10 +32,11 @@ namespace NoogleProject
         }
 
 
-        public void Reader(string message)
+        public bool Reader(string message)
         {
             try
             {
+                //find csv file using streamreader
                 using (StreamReader sr = new StreamReader("textwords.csv"))
                 {
                     string row;
@@ -46,21 +47,21 @@ namespace NoogleProject
 
                         if (message.Contains(row))
                         {
-                            Console.WriteLine("Unacceptable word found, message will be sent to quarantine");
+                            Console.WriteLine("Unacceptable word found(s), message sent to quarantine file");
+                            return true;
                         }
-                        else
-                        {
-                            Console.WriteLine("Message valid");
+                    }
+                        
+                            Console.WriteLine("Message sent to valid file");
+                            return false;
                         }
                     }      
-                }
-            }
-            catch (Exception ex)
+                
+            
+            catch (Exception)
             {
-                Console.WriteLine("The file could not be read:");
-                Console.WriteLine(ex.Message);
-
-                Console.ReadLine();
+                throw new Exception("File not found");
+                
             }
         }
     }

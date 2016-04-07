@@ -37,10 +37,8 @@ namespace NoogleProject
             }
             else
             {
-
+                //send to valid file
             }
-        }
-
-        
+        }   
     }
 }
