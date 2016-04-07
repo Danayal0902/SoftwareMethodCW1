@@ -39,6 +39,15 @@ namespace NoogleProject
             {
                 //send to valid file
             }
-        }   
+            txtMessage.Clear();
+        }
+
+        private void btnAdmin_Click(object sender, RoutedEventArgs e)
+        {
+            AdminWindow admin = new AdminWindow();
+            admin.Owner = this;
+            admin.Show();
+            Hide();    
+        }
     }
 }

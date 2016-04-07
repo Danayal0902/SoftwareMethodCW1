@@ -21,5 +21,25 @@ namespace NoogleProject
             }
             return instance;
         }
+
+        private List<string> quarantineList = new List<string>();
+
+        public List<string> QuarantineList
+        {
+            get
+            {
+                return quarantineList;
+            }
+            set
+            {
+                quarantineList = value;
+            }
+        }
+
+        public string returnMessages()
+        {
+            var returnValue = string.Join(", ", quarantineList.ToArray());
+            return returnValue;
+        }
     }
 }

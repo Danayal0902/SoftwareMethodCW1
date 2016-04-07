@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NoogleProject"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="337.374">
+        Title="MainWindow" Height="363" Width="337.374">
     <Grid>
-        <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="143,289,0,0" VerticalAlignment="Top" Width="75" Click="btnSubmit_Click"/>
+        <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="177,290,0,0" VerticalAlignment="Top" Width="75" Click="btnSubmit_Click"/>
         <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="23" Margin="86,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194"/>
         <Label x:Name="lblName" Content="Name:" HorizontalAlignment="Left" Margin="24,39,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblEmail" Content="Email:" HorizontalAlignment="Left" Margin="24,88,0,0" VerticalAlignment="Top"/>
@@ -15,6 +15,7 @@
         <TextBox x:Name="txtMessage" HorizontalAlignment="Left" Height="128" Margin="86,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194"/>
         <Label x:Name="lblMessage" Content="Message:" HorizontalAlignment="Left" Margin="24,136,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label" Content="Noogle" HorizontalAlignment="Left" Margin="112,-11,0,0" VerticalAlignment="Top" FontSize="26.667"/>
+        <Button x:Name="btnAdmin" Content="Admin" HorizontalAlignment="Left" Margin="97,290,0,0" VerticalAlignment="Top" Width="75" Click="btnAdmin_Click"/>
 
     </Grid>
 </Window>

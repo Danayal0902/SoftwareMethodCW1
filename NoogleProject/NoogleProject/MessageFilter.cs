@@ -47,7 +47,7 @@ namespace NoogleProject
 
                         if (message.Contains(row))
                         {
-                            Console.WriteLine("Unacceptable word found(s), message sent to quarantine file");
+                            Console.WriteLine("Unacceptable word(s) found, message sent to quarantine file");
                             return true;
                         }
                     }
