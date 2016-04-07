@@ -12,6 +12,13 @@ namespace NoogleProject
         private string email;
         private string inputMessage;
 
+        public Messages(string name, string email, string message)
+        {
+            this.name = name;
+            this.email = email;
+            this.inputMessage = message;
+        }
+
 
         public string Name
         {
@@ -71,12 +78,7 @@ namespace NoogleProject
             }
         }
 
-        public Messages(string name, string email, string message)
-        {
-            this.name = name;
-            this.email = email;
-            this.inputMessage = message;
-        }
+        
 
         public string NameText()
         {
