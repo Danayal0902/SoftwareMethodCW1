@@ -28,36 +28,50 @@ namespace NoogleProject
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-            MessageFilter mf = new MessageFilter();
-
-            Messages m = new Messages(txtName.Text, txtEmail.Text, txtMessage.Text);
-
-            if (mf.Reader(m.InputMessage) == true)
+            try
             {
-                //send to quarantine file
 
-                MessageBox.Show("Unacceptable word(s) detected");
-                QuarantineFile quarantine = QuarantineFile.getInstance();
-                quarantine.MessageList.Add(m);
+                MessageFilter mf = new MessageFilter();
+
+                Messages m = new Messages(txtName.Text, txtEmail.Text, txtMessage.Text);
+
+                if (mf.Reader(m.InputMessage) == true)
+                {
+                    //send to quarantine file
+
+                    MessageBox.Show("Unacceptable word(s) detected");
+                    QuarantineFile quarantine = QuarantineFile.getInstance();
+                    quarantine.MessageList.Add(m);
+
+                    txtMessage.Clear();
+                    txtName.Clear();
+                    txtEmail.Clear();
+                }
+                else
+                {
+                    //send to valid file
+
+                    ValidFile valid = ValidFile.getInstance();
+                    valid.MessageList.Add(m);
+
+                    KeywordFilter keywords = new KeywordFilter();
+                    var qualification = keywords.LevelSelect(m.InputMessage);
+                    var subject = keywords.subjectFilter(m.InputMessage);
+                    var uni = keywords.institutionFilter(m.InputMessage);
+                    var name = m.Name;
+                    var email = m.Email;
+
+                    txtMessage.Clear();
+                    txtName.Clear();
+                    txtEmail.Clear();
+                }
             }
-            else
+            catch (Exception ex)
             {
-                //send to valid file
-
-                ValidFile valid = ValidFile.getInstance();
-                valid.MessageList.Add(m);
-
-                KeywordFilter keywords = new KeywordFilter();
-                var qualification = keywords.LevelSelect(m.InputMessage);
-                var subject = keywords.subjectFilter(m.InputMessage);
-                var uni = keywords.institutionFilter(m.InputMessage);
-                var name = m.Name;
-                var email = m.Email;
+                MessageBox.Show("Please fill all required fields");
             }
-            txtMessage.Clear();
-            txtName.Clear();
-            txtEmail.Clear();
         }
+        
 
         private void btnAdmin_Click(object sender, RoutedEventArgs e)
         {

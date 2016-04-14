@@ -20,11 +20,15 @@ namespace NoogleProject
     public partial class AdminWindow : Window
     {
         QuarantineFile quarantine = QuarantineFile.getInstance();
+        ValidFile valid = ValidFile.getInstance();
         public AdminWindow()
         {
             InitializeComponent();
             cboQuarantine.ItemsSource = quarantine.MessageList;
-            cboQuarantine.DisplayMemberPath = "inputMessage";
+            cboQuarantine.DisplayMemberPath = "InputMessage";
+
+            cboValid.ItemsSource = valid.MessageList;
+            cboValid.DisplayMemberPath = "InputMessage";
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)

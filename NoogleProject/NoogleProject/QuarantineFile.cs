@@ -10,7 +10,6 @@ namespace NoogleProject
     {
         private static QuarantineFile instance;
 
-
         private QuarantineFile() { }
 
         public static QuarantineFile getInstance()
