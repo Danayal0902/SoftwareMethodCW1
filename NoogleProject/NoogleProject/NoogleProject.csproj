@@ -59,6 +59,7 @@
     <Compile Include="AdminWindow.xaml.cs">
       <DependentUpon>AdminWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="KeywordFilter.cs" />
     <Compile Include="QuarantineFile.cs" />
     <Compile Include="ValidFile.cs" />
     <Page Include="AdminWindow.xaml">
