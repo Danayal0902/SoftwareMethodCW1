@@ -20,7 +20,7 @@ namespace NoogleProject
             }
             set
             {
-                if(value != null)
+                if (value != null)
                 {
                     text = value;
                 }
