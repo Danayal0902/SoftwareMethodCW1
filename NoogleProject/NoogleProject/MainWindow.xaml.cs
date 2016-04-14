@@ -20,6 +20,7 @@ namespace NoogleProject
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
@@ -33,13 +34,29 @@ namespace NoogleProject
 
             if (mf.Reader(m.InputMessage) == true)
             {
+                //send to quarantine file
+
                 MessageBox.Show("Unacceptable word(s) detected");
+                QuarantineFile quarantine = QuarantineFile.getInstance();
+                quarantine.MessageList.Add(m);
             }
             else
             {
                 //send to valid file
+
+                ValidFile valid = ValidFile.getInstance();
+                valid.MessageList.Add(m);
+
+                KeywordFilter keywords = new KeywordFilter();
+                var qualification = keywords.LevelSelect(m.InputMessage);
+                var subject = keywords.subjectFilter(m.InputMessage);
+                var uni = keywords.institutionFilter(m.InputMessage);
+                var name = m.Name;
+                var email = m.Email;
             }
             txtMessage.Clear();
+            txtName.Clear();
+            txtEmail.Clear();
         }
 
         private void btnAdmin_Click(object sender, RoutedEventArgs e)
