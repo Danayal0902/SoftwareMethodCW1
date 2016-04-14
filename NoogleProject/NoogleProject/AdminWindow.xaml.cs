@@ -23,8 +23,8 @@ namespace NoogleProject
         public AdminWindow()
         {
             InitializeComponent();
-            rdoQuarantine.IsChecked = true;
-            txtblkMessages.Text = quarantine.QuarantineList.ToString();
+            cboQuarantine.ItemsSource = quarantine.MessageList;
+            cboQuarantine.DisplayMemberPath = "inputMessage";
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)

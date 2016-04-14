@@ -6,21 +6,21 @@ using System.Threading.Tasks;
 
 namespace NoogleProject
 {
-    class QuarantineFile
+    class ValidFile
     {
-        private static QuarantineFile instance;
+        private static ValidFile instance;
 
-
-        private QuarantineFile() { }
-
-        public static QuarantineFile getInstance()
+        private ValidFile() { }
+        
+        public static ValidFile getInstance()
         {
             if (instance == null)
             {
-                instance = new QuarantineFile();
+                instance = new ValidFile();
             }
             return instance;
         }
+
 
         private List<Messages> messageList = new List<Messages>();
 
@@ -35,11 +35,5 @@ namespace NoogleProject
                 messageList = value;
             }
         }
-
-        //public string returnMessages()
-        //{
-        //    var returnValue = string.Join(", ", quarantineList.ToArray());
-        //    return returnValue;
-        //}
     }
 }

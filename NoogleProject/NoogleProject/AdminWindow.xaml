@@ -7,10 +7,9 @@
         mc:Ignorable="d"
         Title="AdminWindow" Height="554.545" Width="346.464">
     <Grid>
-        <RadioButton x:Name="rdoValid" Content="Valid Messages" HorizontalAlignment="Left" Margin="24,54,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="rdoQuarantine" Content="Quarantined Messages" HorizontalAlignment="Left" Margin="24,74,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="24,483,0,0" VerticalAlignment="Top" Width="75" Click="btnBack_Click"/>
-        <TextBlock x:Name="txtblkMessages" HorizontalAlignment="Left" Margin="24,113,0,0" TextWrapping="Wrap" Text="Messages displayed here..." VerticalAlignment="Top" Height="350" Width="285"/>
+        <ComboBox x:Name="cboQuarantine" HorizontalAlignment="Left" Margin="24,93,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cboValid" HorizontalAlignment="Left" Margin="189,93,0,0" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>

@@ -60,6 +60,7 @@
       <DependentUpon>AdminWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="QuarantineFile.cs" />
+    <Compile Include="ValidFile.cs" />
     <Page Include="AdminWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
