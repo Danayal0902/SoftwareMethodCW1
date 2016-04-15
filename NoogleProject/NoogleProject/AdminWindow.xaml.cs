@@ -19,18 +19,23 @@ namespace NoogleProject
     /// </summary>
     public partial class AdminWindow : Window
     {
+        //get the instance from the quarantine file
         QuarantineFile quarantine = QuarantineFile.getInstance();
         ValidFile valid = ValidFile.getInstance();
         public AdminWindow()
         {
             InitializeComponent();
+
+            //make the source for the box the list of quarantined messages
             cboQuarantine.ItemsSource = quarantine.MessageList;
             cboQuarantine.DisplayMemberPath = "InputMessage";
 
+            //make the source for the box the list of valid messages
             cboValid.ItemsSource = valid.MessageList;
             cboValid.DisplayMemberPath = "InputMessage";
         }
 
+        //method to close the current window and return to main window
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
             Close();
