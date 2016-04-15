@@ -28,6 +28,7 @@ namespace NoogleProject
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
+            //try catch to require information from all text boxes
             try
             {
 
@@ -43,17 +44,19 @@ namespace NoogleProject
                     QuarantineFile quarantine = QuarantineFile.getInstance();
                     quarantine.MessageList.Add(m);
 
+                    //clear the message box
                     txtMessage.Clear();
-                    txtName.Clear();
-                    txtEmail.Clear();
+                    
                 }
                 else
                 {
                     //send to valid file
+                    MessageBox.Show("Message sent");
 
                     ValidFile valid = ValidFile.getInstance();
                     valid.MessageList.Add(m);
 
+                    //take all areas of valid message from message box and process
                     KeywordFilter keywords = new KeywordFilter();
                     var qualification = keywords.LevelSelect(m.InputMessage);
                     var subject = keywords.subjectFilter(m.InputMessage);
@@ -61,12 +64,15 @@ namespace NoogleProject
                     var name = m.Name;
                     var email = m.Email;
 
+                    
+                    MessageBox.Show("You have chosen: " + qualification);
+                    
                     txtMessage.Clear();
                     txtName.Clear();
-                    txtEmail.Clear();
+                    txtEmail.Clear();               
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Please fill all required fields");
             }
@@ -75,10 +81,13 @@ namespace NoogleProject
 
         private void btnAdmin_Click(object sender, RoutedEventArgs e)
         {
+            //hide the current window and open admin window
             AdminWindow admin = new AdminWindow();
             admin.Owner = this;
             admin.Show();
             Hide();    
         }
+
+        
     }
 }

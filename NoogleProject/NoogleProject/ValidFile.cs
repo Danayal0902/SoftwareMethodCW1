@@ -8,6 +8,7 @@ namespace NoogleProject
 {
     class ValidFile
     {
+        //singleton class
         private static ValidFile instance;
 
         private ValidFile() { }
@@ -21,9 +22,10 @@ namespace NoogleProject
             return instance;
         }
 
-
+        //declare list for this class
         private List<Messages> messageList = new List<Messages>();
 
+        //public properties for the declared list
         public List<Messages> MessageList
         {
             get

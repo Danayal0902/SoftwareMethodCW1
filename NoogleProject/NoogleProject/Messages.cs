@@ -8,12 +8,14 @@ namespace NoogleProject
 {
     class Messages
     {
+
+        //declare variables
         private string name;
         private string email;
         private string inputMessage;
 
 
-
+        //data validation for all fields
         public string Name
         {
             get
@@ -72,7 +74,7 @@ namespace NoogleProject
             }
         }
 
-
+        //initialise class variables
         public Messages(string name, string email, string message)
         {
             this.name = name;
@@ -80,7 +82,7 @@ namespace NoogleProject
             inputMessage = message;
         }
 
-
+        //visual representations of each variable
         public string NameText()
         {
             return name;

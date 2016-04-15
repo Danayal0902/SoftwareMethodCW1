@@ -8,6 +8,7 @@ namespace NoogleProject
 {
     class QuarantineFile
     {
+        //singleton class
         private static QuarantineFile instance;
 
         private QuarantineFile() { }
@@ -21,8 +22,12 @@ namespace NoogleProject
             return instance;
         }
 
+
+        //declare list for this class
         private List<Messages> messageList = new List<Messages>();
 
+
+        //public properties for the declared list
         public List<Messages> MessageList
         {
             get
@@ -34,11 +39,5 @@ namespace NoogleProject
                 messageList = value;
             }
         }
-
-        //public string returnMessages()
-        //{
-        //    var returnValue = string.Join(", ", quarantineList.ToArray());
-        //    return returnValue;
-        //}
     }
 }
